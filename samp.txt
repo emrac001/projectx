@@ -1,0 +1,28 @@
+<input class="form-control" type="email" id="txtEmail" placeholder="Email Address" required>
+
+<input class="form-control" type="text" id="txtPhone" placeholder="Phone Number" required>
+<input class="form-control" type="password" id="pwd1" placeholder="Password" required>
+<input class="form-control" type="password" id="pwd2" placeholder="Confirm Password" required>
+
+<button class="form-control btn btn-outline-light elementbg" type="submit" id="btnSubmit">
+              	CREATE ACCOUNT
+              </button>
+
+
+
+
+'''
+@app.route('/guesthome/', methods=['POST', 'GET'])
+@csrf.exempt
+def home2():
+    form = GuestForm()
+    if form.validate_on_submit:
+        c = Guest(fullname=request.form['name'], email=request.form['email'])
+        db.session.add(c)
+        db.session.commit()
+        flash('Thank you for completing guest book')
+        return redirect('/guesthome')
+    else:
+        #gift = db.session.query(Gift).all()
+        return render('guestapp.html', form=form)
+        '''

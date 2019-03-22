@@ -1,0 +1,55 @@
+Create a folder to store your virtual environment > in cmd, go to the folder dir. > to install the virtual_env on the folder:
+python -m venv vproject
+
+python -m pip install --upgrade pip
+
+to activate venv > in cmd, on your folder dir >:
+vproject\Scripts\activate.bat
+
+
+to install Flask > after activating >:
+pip install Flask
+
+
+to install WTF
+pip install flask-wtf
+
+to install sqlalchemy
+pip install flask-sqlalchemy
+
+to install mysql-connector
+pip install mysql-connector
+
+to install xmltodict:
+pip install xmltodict
+
+
+To run db tables:
+python
+from mypackage import db
+db.create_all()
+db.drop_all()
+
+#windowns:
+#set FLASK_APP = file.py
+#flask run
+ctrl_shift_R: to refresh and clear catch
+
+#python -m flask run
+#pip freeze requirements.txt
+
+https://youtu.be/Lv1fv-HmkQo?list=PLQVvvaa0QuDc_owjTbIY4rbgXOFkUYOUB
+
+1. Database model - model module
+Product - id, prod_name, prod_amount
+
+2. >>>import app, db
+>>> db.create_all()
+
+3. Create an endpoint/view - view module
+
+4. html template
+
+To generate random secrets token in python shell:
+import secrets
+secrets.token_hex(bit number)
