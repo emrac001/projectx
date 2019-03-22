@@ -53,3 +53,5 @@ Product - id, prod_name, prod_amount
 To generate random secrets token in python shell:
 import secrets
 secrets.token_hex(bit number)
+
+I made a change
